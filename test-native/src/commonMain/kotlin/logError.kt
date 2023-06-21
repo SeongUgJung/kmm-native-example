@@ -1,0 +1,1 @@
+expect fun logError(message: String)
