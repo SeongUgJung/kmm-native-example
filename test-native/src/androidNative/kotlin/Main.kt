@@ -16,7 +16,7 @@ import platform.android.jstring
 fun loge(env: CPointer<JNIEnvVar>, obj: jobject, message: jstring) {
     memScoped {
         val byteArray = env.pointed.pointed?.GetStringUTFChars?.invoke(env, message, null)
-        logError("${byteArray?.toKStringFromUtf8()}")
+        logErrorWrapped("${byteArray?.toKStringFromUtf8()}")
     }
 }
 
